@@ -1,0 +1,24 @@
+{
+  "name": "knowledge-battles",
+  "description": "Game knowledge-battles",
+  "main": "index.js",
+  "authors": [
+    "Carlos Aguilera <ceaf.21@gmail.com>"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "3.3.4",
+    "angular": "^1.6.2",
+    "angular-ui-router": "^0.4.2",
+    "angular-cookies": "^1.6.4"
+  }
+}
