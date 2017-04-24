@@ -56,6 +56,26 @@ angular.module('knowledgeBattlesApp').
             console.log($rootScope.posYAct);
             if(grid[$rootScope.posXAct][$rootScope.posYAct].enemy)
                 open();
+        },
+        mapCompleted : function(grid) {
+            let compled = true;
+            let i = 0;
+            let j = 0;
+            console.log(i,j,compled)
+            while (i<9 && compled) {
+                console.log("entro en el while");
+                while(j<9 && compled) {
+                    if(grid[i][j].explored)
+                        j++;
+                    else
+                        compled = false;
+                }
+                i++;
+            }
+            console.log(compled);
+            if(compled){
+                open();
+            }
         }
     }
 });
