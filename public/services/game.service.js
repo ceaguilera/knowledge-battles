@@ -14,13 +14,13 @@ angular.module('knowledgeBattlesApp').
         move : function(direction, grid) {
             grid[$rootScope.posXAct][$rootScope.posYAct].explored = true;
             grid[$rootScope.posXAct][$rootScope.posYAct].active = false;
-            console.log($rootScope.posXAct,$rootScope.posYAct);
-            console.log( grid[$rootScope.posXAct][$rootScope.posYAct]);
+            //console.log($rootScope.posXAct,$rootScope.posYAct);
+            //console.log( grid[$rootScope.posXAct][$rootScope.posYAct]);
             switch (direction) {
                 case "left":
-                    console.log("entro left");
+                    //console.log("entro left");
                     if(($rootScope.posYAct-1>=0) && ($rootScope.posYAct-1<10)) {
-                        console.log("entro en la condicion",$rootScope.posYAct, $rootScope.posYAct)
+                        //console.log("entro en la condicion",$rootScope.posYAct, $rootScope.posYAct)
                         grid[$rootScope.posXAct][$rootScope.posYAct-1].active = true;
                         $rootScope.posYAct = $rootScope.posYAct-1;
                         $rootScope.$apply();
@@ -52,8 +52,8 @@ angular.module('knowledgeBattlesApp').
             }
         },
         enemyOn : function(grid) {
-            console.log($rootScope.posXAct);
-            console.log($rootScope.posYAct);
+            //console.log($rootScope.posXAct);
+            //console.log($rootScope.posYAct);
             if(grid[$rootScope.posXAct][$rootScope.posYAct].enemy)
                 open();
         },
@@ -61,10 +61,12 @@ angular.module('knowledgeBattlesApp').
             let compled = true;
             let i = 0;
             let j = 0;
-            console.log(i,j,compled)
-            while (i<9 && compled) {
-                console.log("entro en el while");
-                while(j<9 && compled) {
+            console.log("Comenzo")
+            while (i<10 && compled) {
+                console.log("i",i);
+                j = 0;
+                while(j<10 && compled) {
+                    console.log("j",j);
                     if(grid[i][j].explored)
                         j++;
                     else
