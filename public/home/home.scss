@@ -1,0 +1,41 @@
+@import '../varibles';
+@import '../fonts';
+
+.home {
+    .block-center {
+        position: absolute;
+        background-color: rgba(250, 248, 239, 0.6);
+        text-align: center;
+        margin-top: 8%;
+        padding-top: 1%;
+        height: 300px;
+        border-radius: 10px;
+    }
+    img {
+        width: 100%;
+        height: 100%;
+    }
+    h1 {
+        color: $secundary-color;
+        font-family: Roboto;
+        font-size: 65px;
+    }
+    h2 {
+        font-family: Roboto;
+    }
+    button {
+        width: 100%;
+        margin-top: 1%;
+        margin-bottom: 1%;
+        color: #ffffff;
+        font-weight: bold;
+        background-color: #776E65;
+        border-color: #776E65;
+        font-size: 17px;
+        &:hover,:visited, :focus {
+            color: #fff;
+            background-color: #757372;
+            border-color: #757372;
+        }
+    }
+}
