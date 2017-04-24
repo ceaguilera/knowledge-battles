@@ -5,6 +5,8 @@
     [
         'ui.router',
         'ngCookies',
+        'ngAnimate', 
+        'ui.bootstrap',
         'knowledgeBattlesApp.home', 
         'knowledgeBattlesApp.login',
         'knowledgeBattlesApp.register',
