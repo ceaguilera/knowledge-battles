@@ -47,4 +47,10 @@ angular.module('knowledgeBattlesApp').
                 i++;
             }
         }
+        /* Potiion anitial */
+        this.potitionInitial =  function (grid) {
+            $rootScope.posXAct = Math.floor(Math.random()*10);
+            $rootScope.posYAct = Math.floor(Math.random()*10);
+            grid[$rootScope.posXAct][$rootScope.posYAct].active = true;
+        }
 });
