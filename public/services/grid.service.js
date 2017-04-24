@@ -20,5 +20,14 @@ angular.module('knowledgeBattlesApp').
                 }
             }
         }
-        
+        /* Load enemies of the file enemies.js that is in the root of the project */
+        this.loadEnemy = function() {
+            $http.get("/enemies.json")
+                .then(function mySucces(response) {
+                    console.log(response);
+                    $rootScope.enemies = response.data;
+                }, function myError(response) {
+                   console.log(response);
+            });
+        }
 });
