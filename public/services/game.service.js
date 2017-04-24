@@ -1,5 +1,14 @@
 angular.module('knowledgeBattlesApp').
-    factory("gameService", function($rootScope, $http) {
+    factory("gameService", function($rootScope, $http, $uibModal) {
+        var open = function () {
+            var modalInstance = $uibModal.open({
+                animation: true,
+                ariaLabelledBy: 'modal-title',
+                ariaDescribedBy: 'modal-body',
+                templateUrl: 'modalPrueba.html',
+            });
+        }
+
     return{
         /*  */
         move : function(direction, grid) {
@@ -41,6 +50,12 @@ angular.module('knowledgeBattlesApp').
                 default:
                     break;
             }
+        },
+        enemyOn : function(grid) {
+            console.log($rootScope.posXAct);
+            console.log($rootScope.posYAct);
+            if(grid[$rootScope.posXAct][$rootScope.posYAct].enemy)
+                open();
         }
     }
 });
