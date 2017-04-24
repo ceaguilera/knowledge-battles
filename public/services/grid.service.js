@@ -30,4 +30,21 @@ angular.module('knowledgeBattlesApp').
                    console.log(response);
             });
         }
+        /* Calculation the enemies for level */
+        this.assignEnemies = function (level, grid) {
+            let numEnemies = (2 * 20) - (level * 5);
+            //console.log(numEnemies);
+            let i = 0;
+            while (i < numEnemies) {
+                let posRandomOne = Math.floor(Math.random()*10);
+                let posRandomTwo = Math.floor(Math.random()*10);
+                //console.log(posRandomOne);
+                //console.log(posRandomTwo);
+                grid[posRandomOne][posRandomTwo].enemy = true;
+                //console.log(grid[posRandomOne][posRandomTwo]);
+                posRandomOne = null;
+                posRandomTwo = null;
+                i++;
+            }
+        }
 });
