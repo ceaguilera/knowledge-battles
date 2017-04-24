@@ -1,6 +1,18 @@
 angular.module('knowledgeBattlesApp.game')
 .controller('game', function($scope, $rootScope, $log, $http, auth, $cookies, gridService, gameService) {
-        
+    
+    /*Initializes initial game values*/
+    (function initGame() {
+        $scope.grids = gridService.createGrid();
+        $rootScope.posXAct = null; 
+        $rootScope.posYAct = null;
+        gridService.initGrid($scope.grids);
+        gridService.loadEnemy();
+        gridService.assignEnemies(1, $scope.grids);
+        gridService.potitionInitial($scope.grids);
+        console.log($scope.grids, $rootScope.posXAct, $rootScope.posYAct);
+    })();
+    
     window.focus();
     window.onkeydown = keypress
 
