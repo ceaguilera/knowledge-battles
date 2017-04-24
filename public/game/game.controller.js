@@ -1,5 +1,5 @@
 angular.module('knowledgeBattlesApp.game')
-.controller('game', function($scope, $rootScope, $log, $http, $cookies, gridService, gameService) {
+.controller('game', function($scope, $rootScope, $log, $http, $cookies, gridService, gameService, $uibModal) {
     
     /*Initializes initial game values*/
     (function initGame() {
@@ -10,7 +10,7 @@ angular.module('knowledgeBattlesApp.game')
         gridService.loadEnemy();
         gridService.assignEnemies(1, $scope.grids);
         gridService.potitionInitial($scope.grids);
-        console.log($scope.grids, $rootScope.posXAct, $rootScope.posYAct);
+        //console.log($scope.grids, $rootScope.posXAct, $rootScope.posYAct);
     })();
     
     window.focus();
@@ -20,23 +20,40 @@ angular.module('knowledgeBattlesApp.game')
         switch (event.keyCode) {
             case 37:
                 gameService.move("left", $scope.grids);
-                console.log(37);
+                //gameService.enemyOn($scope.grids);
+                gameService.mapCompleted($scope.grids);
+                //console.log(37);
                 break;
             case 38:
                 gameService.move("up", $scope.grids);
-                console.log(38);
+                //gameService.enemyOn($scope.grids)
+                gameService.mapCompleted($scope.grids);
+                //console.log(38);
                 break;
             case 39:
                 gameService.move("rigth", $scope.grids);
-                console.log(39);
+                //gameService.enemyOn($scope.grids);
+                gameService.mapCompleted($scope.grids);
+                //console.log(39);
                 break;
             case 40:
                 gameService.move("down", $scope.grids);
-                console.log(40);
+                //gameService.enemyOn($scope.grids);
+                gameService.mapCompleted($scope.grids);
+                //console.log(40);
                 break;
             default:
                 break;
         }
+    }
+
+    $scope.open = function () {
+        var modalInstance = $uibModal.open({
+            animation: true,
+            ariaLabelledBy: 'modal-title',
+            ariaDescribedBy: 'modal-body',
+            templateUrl: 'modalPrueba.html',
+        });
     }
 
 });
