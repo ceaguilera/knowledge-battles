@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html ng-app="knowledgeBattlesApp">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="knowledgeBattlesApp">
+  <title ng-bind="pageTitle"></title>
+
+  <!-- inject:css -->
+  <link rel="stylesheet" href="./app.css">
+  <link rel="stylesheet" href="./home/home.css">
+  <link rel="stylesheet" href="./layout/layout.css">
+  <link rel="stylesheet" href="./login/login.css">
+  <link rel="stylesheet" href="./register/register.css">
+  <link rel="stylesheet" href="./game/game.css">
+  <!-- endinject -->
+
+  <!-- bower:css -->
+  <link rel="stylesheet" href="../assets/bootstrap/dist/css/bootstrap.css" />
+  <!-- endbower -->
+
+  
+  <!-- bower:js -->
+  <script src="../assets/jquery/dist/jquery.js"></script>
+  <script src="../assets/bootstrap/dist/js/bootstrap.js"></script>
+  <script src="../assets/angular/angular.js"></script>
+  <script src="../assets/angular-ui-router/release/angular-ui-router.js"></script>
+  <script src="../assets/angular-cookies/angular-cookies.js"></script>
+  <!-- endbower -->
+
+  <!-- inject:js -->
+  <script src="./app.module.js"></script>
+
+  <script src="./home/home.module.js"></script>
+  <script src="./home/home.router.js"></script>
+  <script src="./home/home.controller.js"></script>
+
+  <script src="./login/login.module.js"></script>
+  <script src="./login/login.router.js"></script>
+  <script src="./login/login.controller.js"></script>
+
+  <script src="./register/register.module.js"></script>
+  <script src="./register/register.router.js"></script>
+  <script src="./register/register.controller.js"></script>
+
+  <script src="./game/game.module.js"></script>
+  <script src="./game/game.router.js"></script>
+  <script src="./game/game.controller.js"></script>
+  <!-- endinject -->
+
+  <!-- services -->
+  <script src="./services/grid.service.js"></script>
+  <script src="./services/game.service.js"></script>
+  <!-- Archivos de produccion
+  <link rel="stylesheet" href="/css/styles.css">
+  <script src="js/scripts.js"></script>#}
+  -->
+</head>
+
+<body class="app">
+    <!-- Main Content -->
+    <div ui-view></div>
+</body>
+
+</html>
