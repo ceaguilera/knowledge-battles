@@ -1,90 +1,102 @@
 [
-    [
+    {
+        "operation":"sum",
+        "numberOne": 5,
+        "numberTwo": 8
+    },
+    {
+        "operation":"subtraction",
+        "numberOne": 40,
+        "numberTwo": 9
+    },
+    {
+        "operation":"sum",
+        "numberOne": 11,
+        "numberTwo": 525
+    },
+    {
+        "operation":"multiplication",
+        "numberOne": 15,
+        "numberTwo": 225
+    },
         {
-            "operation":"sum",
-            "numberOne": 5,
-            "numberTwo": 8
-        },
+        "operation":"division",
+        "numberOne": 500,
+        "numberTwo": 50
+    },
         {
-            "operation":"sum",
-            "numberOne": 5,
-            "numberTwo": 8
-        },
+        "operation":"sum",
+        "numberOne": 20,
+        "numberTwo": 80
+    },
+    {
+        "operation":"subtraction",
+        "numberOne": 40,
+        "numberTwo": 9
+    },
+    {
+        "operation":"sum",
+        "numberOne": 1225,
+        "numberTwo": 555
+    },
+    {
+        "operation":"multiplication",
+        "numberOne": 15,
+        "numberTwo": 14
+    },
         {
-            "operation":"sum",
-            "numberOne": 5,
-            "numberTwo": 8
-        },
+        "operation":"division",
+        "numberOne": 880,
+        "numberTwo": 10
+    },
         {
-            "operation":"sum",
-            "numberOne": 5,
-            "numberTwo": 8
-        }
-    ],
-    [
+        "operation":"sum",
+        "numberOne": 65,
+        "numberTwo": 8
+    },
+    {
+        "operation":"subtraction",
+        "numberOne": 400,
+        "numberTwo": 153
+    },
+    {
+        "operation":"sum",
+        "numberOne": 544,
+        "numberTwo": 10
+    },
+    {
+        "operation":"multiplication",
+        "numberOne": 5,
+        "numberTwo": 8
+    },
         {
-            "operation":"sum",
-            "numberOne": 5,
-            "numberTwo": 8
-        },
+        "operation":"division",
+        "numberOne": 10,
+        "numberTwo": 1
+    },
         {
-            "operation":"sum",
-            "numberOne": 5,
-            "numberTwo": 8
-        },
+        "operation":"sum",
+        "numberOne": 0,
+        "numberTwo": 1890
+    },
+    {
+        "operation":"subtraction",
+        "numberOne": 15,
+        "numberTwo": 9
+    },
+    {
+        "operation":"sum",
+        "numberOne": 2,
+        "numberTwo": 52555
+    },
+    {
+        "operation":"multiplication",
+        "numberOne": 1,
+        "numberTwo": 3500
+    },
         {
-            "operation":"sum",
-            "numberOne": 5,
-            "numberTwo": 8
-        },
-        {
-            "operation":"sum",
-            "numberOne": 5,
-            "numberTwo": 8
-        }    
-    ],
-    [
-        {
-            "operation":"sum",
-            "numberOne": 5,
-            "numberTwo": 8
-        },
-        {
-            "operation":"sum",
-            "numberOne": 5,
-            "numberTwo": 8
-        },
-        {
-            "operation":"sum",
-            "numberOne": 5,
-            "numberTwo": 8
-        },
-        {
-            "operation":"sum",
-            "numberOne": 5,
-            "numberTwo": 8
-        }
-    ],
-    [
-        {
-            "operation":"sum",
-            "numberOne": 5,
-            "numberTwo": 8
-        },
-        {
-            "operation":"sum",
-            "numberOne": 5,
-            "numberTwo": 8
-        },
-        {
-            "operation":"sum",
-            "numberOne": 5,
-            "numberTwo": 8
-        },
-        {
-            "operation":"sum",
-            "numberOne": 5,
-            "numberTwo": 8
-        }
-    ]
+        "operation":"division",
+        "numberOne": 100,
+        "numberTwo": 10
+    }
 ]
