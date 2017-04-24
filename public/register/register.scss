@@ -1,0 +1,73 @@
+@import '../varibles';
+@import '../fonts';
+
+.register {
+    .error {
+        color: red;
+    }
+    .errorImput {
+        border-color: red;
+    }
+    .block-center {
+        position: absolute;
+        background-color: rgba(250, 248, 239, 0.6);
+        text-align: center;
+        margin-top: 4.5%;
+        padding-top: 1%;
+        height: auto;
+        border-radius: 10px;
+    }
+    .img-hover {
+        &:hover{
+            border-width: 5px;
+            border-style: solid;
+            cursor: pointer;
+        }
+    }
+    .img-select {
+        border-width: 5px;
+        border-style: solid;
+        border-color: #b0ad3f;
+    }
+    .title-select {
+        color: #b0ad3f;
+    }
+    img {
+        width: 100%;
+        height: 100%;
+    }
+    h1 {
+        color: $secundary-color;
+        font-family: Roboto;
+        font-size: 40px;
+    }
+    h2 {
+        font-family: Roboto;
+        font-size: 20px;
+    }
+    button {
+        width: 100%;
+        margin-top: 1%;
+        margin-bottom: 1%;
+        color: #ffffff;
+        font-weight: bold;
+        background-color: #776E65;
+        border-color: #776E65;
+        font-size: 17px;
+        &:hover,:visited, :focus {
+            color: #fff;
+            background-color: #757372;
+            border-color: #757372;
+        }
+    }
+    input {
+        width: 50%;
+        margin-left: 25%;
+        margin-bottom: 30px;
+        color: #fff;
+        font-size: 20px;
+        text-align: center;
+        background-color: #776e65;
+        border: 1px solid #776e65;
+    }
+}

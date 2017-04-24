@@ -1,0 +1,71 @@
+@font-face {
+  font-family: 'Roboto';
+  font-weight: 400;
+  font-style: normal;
+  src: url("http://fonts.gstatic.com/s/roboto/v15/5YB-ifwqHP20Yn46l_BDhA.eot");
+  src: url("http://fonts.gstatic.com/s/roboto/v15/5YB-ifwqHP20Yn46l_BDhA.eot?#iefix") format("embedded-opentype"), local("Roboto"), local("Roboto-regular"), url("http://fonts.gstatic.com/s/roboto/v15/oMMgfZMQthOryQo9n22dcuvvDin1pK8aKteLpeZ5c0A.woff2") format("woff2"), url("http://fonts.gstatic.com/s/roboto/v15/CrYjSnGjrRCn0pd9VQsnFOvvDin1pK8aKteLpeZ5c0A.woff") format("woff"), url("http://fonts.gstatic.com/s/roboto/v15/zN7GBFwfMP4uA6AR0HCoLQ.ttf") format("truetype"), url("http://fonts.gstatic.com/l/font?kit=_YZOZaQ9UBZzaxiLBLcgZg&skey=a0a0114a1dcab3ac&v=v15#Roboto") format("svg"); }
+
+.register .error {
+  color: red; }
+
+.register .errorImput {
+  border-color: red; }
+
+.register .block-center {
+  position: absolute;
+  background-color: rgba(250, 248, 239, 0.6);
+  text-align: center;
+  margin-top: 4.5%;
+  padding-top: 1%;
+  height: auto;
+  border-radius: 10px; }
+
+.register .img-hover:hover {
+  border-width: 5px;
+  border-style: solid;
+  cursor: pointer; }
+
+.register .img-select {
+  border-width: 5px;
+  border-style: solid;
+  border-color: #b0ad3f; }
+
+.register .title-select {
+  color: #b0ad3f; }
+
+.register img {
+  width: 100%;
+  height: 100%; }
+
+.register h1 {
+  color: #776E65;
+  font-family: Roboto;
+  font-size: 40px; }
+
+.register h2 {
+  font-family: Roboto;
+  font-size: 20px; }
+
+.register button {
+  width: 100%;
+  margin-top: 1%;
+  margin-bottom: 1%;
+  color: #ffffff;
+  font-weight: bold;
+  background-color: #776E65;
+  border-color: #776E65;
+  font-size: 17px; }
+  .register button:hover, .register button :visited, .register button :focus {
+    color: #fff;
+    background-color: #757372;
+    border-color: #757372; }
+
+.register input {
+  width: 50%;
+  margin-left: 25%;
+  margin-bottom: 30px;
+  color: #fff;
+  font-size: 20px;
+  text-align: center;
+  background-color: #776e65;
+  border: 1px solid #776e65; }
