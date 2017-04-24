@@ -32,8 +32,12 @@
                 margin-right: 5px;
                 display: inline-block;
             }
-            .block-active{
+            .block-active {
                 background-color: black !important;
+            }
+            .block-explored {
+                background: rgb(175, 136, 100) url(../assets/images/Flag.png);
+                background-size: 52px 52px;
             }
         }
         

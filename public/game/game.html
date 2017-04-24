@@ -1,7 +1,7 @@
 <div class="game">
     <div class="container">
         <div class="col-xs-3 info-table">
-            <h1>¡Bienvenido a </h1>
+            <h1 ng-click="open()">¡Bienvenido a </h1>
             <h4>Datos</h4>
             <h4>Correo: ceaf.21@gmail.com</h4>
             <h4>Personaje: Simon Bolivar</h4>
@@ -14,7 +14,8 @@
                     <div 
                         ng-repeat="grides in grid track by $index" 
                         class="block-potition"
-                        ng-class="{'block-active' : grides.active === true}"
+                        ng-class="{'block-active' : grides.active === true, 
+                        'block-explored' : grides.explored === true }"
                     >
 
                     </div>
@@ -24,3 +25,4 @@
         </div>
     </div>
 </div>
+<div ng-include="'../modals/modalPrueba.html'"></div>
