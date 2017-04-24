@@ -4,13 +4,8 @@ var path    = require("path");
 var app = express();
 
 
-app.listen(3001, function() {
-  console.log('Servidor funcionando en http://localhost:3001');
-  //console.log(path.join(__dirname+'/public/app/index.html'));
-});
-
-
-
+app.set('port', (process.env.PORT || 8080))
+app.listen(app.get('port'));
 
 app.use(express.static(path.join(__dirname, 'public/')));
 
