@@ -14,7 +14,8 @@ angular.module('knowledgeBattlesApp.game')
     })();
     
     window.focus();
-    window.onkeydown = keypress
+    window.onkeydown = keypress;
+    $rootScope.keypressOK = keypress;
 
     function keypress() {
         switch (event.keyCode) {

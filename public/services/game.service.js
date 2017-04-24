@@ -1,11 +1,14 @@
 angular.module('knowledgeBattlesApp').
     factory("gameService", function($rootScope, $http, $uibModal) {
-        var open = function () {
+        var open = function (template) {
+            window.onkeydown = null;
             var modalInstance = $uibModal.open({
                 animation: true,
                 ariaLabelledBy: 'modal-title',
                 ariaDescribedBy: 'modal-body',
-                templateUrl: 'modalPrueba.html',
+                templateUrl: template,
+                backdrop  : 'static',
+                keyboard  : false
             });
         }
 
@@ -76,7 +79,7 @@ angular.module('knowledgeBattlesApp').
             }
             console.log(compled);
             if(compled){
-                open();
+                open('modalWin.html');
             }
         }
     }
