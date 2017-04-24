@@ -8,5 +8,17 @@ angular.module('knowledgeBattlesApp').
             }
             return grid;
         }
-    
+        /* Initialitian the grid for init game */
+        this.initGrid = function(grid) {
+            for(let i=0;i<10;i++){
+                for(let j=0;j<10;j++){
+                    grid[i][j] = {
+                        active: false,
+                        explored: false,
+                        enemy: false 
+                    }
+                }
+            }
+        }
+        
 });
