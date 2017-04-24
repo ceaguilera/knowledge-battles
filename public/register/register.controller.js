@@ -1,5 +1,5 @@
 angular.module('knowledgeBattlesApp.register')
-.controller('register', function($scope, $log, $http, $window, auth, $state) {
+.controller('register', function($scope, $log, $http, $window, $state) {
     $scope.characters = [
         {
             id: 1,

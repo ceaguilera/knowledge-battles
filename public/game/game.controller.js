@@ -1,5 +1,5 @@
 angular.module('knowledgeBattlesApp.game')
-.controller('game', function($scope, $rootScope, $log, $http, auth, $cookies, gridService, gameService) {
+.controller('game', function($scope, $rootScope, $log, $http, $cookies, gridService, gameService) {
     
     /*Initializes initial game values*/
     (function initGame() {
