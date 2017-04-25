@@ -1,6 +1,6 @@
 angular.module('knowledgeBattlesApp').
     factory("gameService", function($rootScope, $http, $uibModal) {
-        var open = function (template) {
+        var open = function (template, Controller) {
             window.onkeydown = null;
             var modalInstance = $uibModal.open({
                 animation: true,
@@ -8,10 +8,10 @@ angular.module('knowledgeBattlesApp').
                 ariaDescribedBy: 'modal-body',
                 templateUrl: template,
                 backdrop  : 'static',
-                keyboard  : false
+                keyboard  : false,
+                controller: Controller,
             });
         }
-
     return{
         /*  */
         move : function(direction, grid) {
@@ -58,9 +58,9 @@ angular.module('knowledgeBattlesApp').
             //console.log($rootScope.posXAct);
             //console.log($rootScope.posYAct);
             if(grid[$rootScope.posXAct][$rootScope.posYAct].enemy)
-                open();
+                open('modalEnemy.html', 'modalEnemy');
         },
-        mapCompleted : function(grid) {
+        mapCompleted : function (grid) {
             let compled = true;
             let i = 0;
             let j = 0;
@@ -81,6 +81,32 @@ angular.module('knowledgeBattlesApp').
             if(compled){
                 open('modalWin.html');
             }
+        },
+        attackProblem : function () {
+            return $rootScope.enemies[Math.floor(Math.random()*20)];
+        },
+        solutionProblem : function (response, problem) {
+            console.log(response, problem);
+            let solution;
+            switch (problem.operation) {
+                case "+":
+                    solution = (problem.numberOne + problem.numberTwo);
+                    break;
+                case "-":
+                    solution = (problem.numberOne - problem.numberTwo);
+                    break;
+                case "*":
+                    solution = (problem.numberOne * problem.numberTwo);
+                    break;
+                case "/":
+                    solution = (problem.numberOne / problem.numberTwo);
+                    break;
+                default:
+                    break;
+            }
+            console.log(solution);
+            return solution == response;
         }
+        
     }
 });
