@@ -6,6 +6,8 @@ angular.module('knowledgeBattlesApp.game')
         $scope.grids = gridService.createGrid();
         $rootScope.posXAct = null; 
         $rootScope.posYAct = null;
+        $rootScope.level = 1;
+        $rootScope.score = 0;
         gridService.initGrid($scope.grids);
         gridService.loadEnemy();
         gridService.assignEnemies(6, $scope.grids);
@@ -47,4 +49,8 @@ angular.module('knowledgeBattlesApp.game')
                 break;
         }
     }
+
+    $scope.saveGame = () => {
+        gameService.saveGame($scope.grids);
+    } 
 });

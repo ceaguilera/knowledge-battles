@@ -6,9 +6,9 @@
             <h4><strong>Email:</strong> {{user.email}}</h4>
             <h4><strong>Character:</strong> {{user.character.name}}</h4>
             <img src="{{user.character.urlImage}}" class="img-circle img-character">
-            <h4><strong>Score: 0</strong> </h4>
-            <h4><strong>Level: 0</strong></h4>
-            <button class="btn btn-primary">Save and exit</button>
+            <h4><strong>Score: {{score}}</strong> </h4>
+            <h4><strong>Level: {{level}}</strong></h4>
+            <button class="btn btn-primary" ng-click="saveGame()">Save and exit</button>
         </div>
         <div class="col-xs-9 grid-table">      
             <div class="row grid">
