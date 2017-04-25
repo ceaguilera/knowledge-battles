@@ -24,7 +24,6 @@ angular.module('knowledgeBattlesApp').
         this.loadEnemy = function() {
             $http.get("/enemies.json")
                 .then(function mySucces(response) {
-                    console.log(response);
                     $rootScope.enemies = response.data;
                 }, function myError(response) {
                    console.log(response);
@@ -37,10 +36,7 @@ angular.module('knowledgeBattlesApp').
             while (i < numEnemies) {
                 let posRandomOne = Math.floor(Math.random()*10);
                 let posRandomTwo = Math.floor(Math.random()*10);
-                //console.log(posRandomOne);
-                //console.log(posRandomTwo);
                 grid[posRandomOne][posRandomTwo].enemy = true;
-                //console.log(grid[posRandomOne][posRandomTwo]);
                 posRandomOne = null;
                 posRandomTwo = null;
                 i++;

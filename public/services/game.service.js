@@ -1,5 +1,6 @@
 angular.module('knowledgeBattlesApp').
     factory("gameService", function($rootScope, $http, $uibModal,$window) {
+        /* function for open modals  */
         var open = function (template, Controller) {
             window.onkeydown = null;
             var modalInstance = $uibModal.open({
@@ -13,7 +14,7 @@ angular.module('knowledgeBattlesApp').
             });
         }
     return{
-        /*  */
+        /* Function for handling game movements */
         move : function(direction, grid) {
             if(!grid[$rootScope.posXAct][$rootScope.posYAct].explored)
                 $rootScope.score = $rootScope.score + 5;
@@ -22,9 +23,7 @@ angular.module('knowledgeBattlesApp').
             
             switch (direction) {
                 case "left":
-                    //console.log("entro left");
                     if(($rootScope.posYAct-1>=0) && ($rootScope.posYAct-1<10)) {
-                        //console.log("entro en la condicion",$rootScope.posYAct, $rootScope.posYAct)
                         grid[$rootScope.posXAct][$rootScope.posYAct-1].active = true;
                         $rootScope.posYAct = $rootScope.posYAct-1;
                         $rootScope.$apply();
@@ -55,22 +54,19 @@ angular.module('knowledgeBattlesApp').
                     break;
             }
         },
+        /* Function to detect if it is an enemy */
         enemyOn : function(grid) {
-            //console.log($rootScope.posXAct);
-            //console.log($rootScope.posYAct);
             if(grid[$rootScope.posXAct][$rootScope.posYAct].enemy && !grid[$rootScope.posXAct][$rootScope.posYAct].explored)
                 open('modalEnemy.html', 'modalEnemy');
         },
+        /* Function that verifies if the entire map is explored */
         mapCompleted : function (grid) {
             let compled = true;
             let i = 0;
             let j = 0;
-            console.log("Comenzo")
             while (i<10 && compled) {
-                console.log("i",i);
                 j = 0;
                 while(j<10 && compled) {
-                    console.log("j",j);
                     if(grid[i][j].explored)
                         j++;
                     else
@@ -78,16 +74,16 @@ angular.module('knowledgeBattlesApp').
                 }
                 i++;
             }
-            console.log(compled);
             if(compled){
                 open('modalWin.html');
             }
         },
+        /* Function that assigns a mathematical problem */
         attackProblem : function () {
             return $rootScope.enemies[Math.floor(Math.random()*20)];
         },
-        solutionProblem : function (response, problem) {
-            console.log(response, problem);
+        /* Function that returns from the solution of the mathematical problem */
+        solutionProblem : function (response, problem) {;
             let solution;
             switch (problem.operation) {
                 case "+":
@@ -105,9 +101,9 @@ angular.module('knowledgeBattlesApp').
                 default:
                     break;
             }
-            console.log(solution);
             return solution == response;
         },
+        /* Function that saves the game */
         saveGame : function (grid) {
             let users = JSON.parse($window.localStorage.getItem('Users'));
             const dateUser = new Object();

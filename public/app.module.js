@@ -14,6 +14,7 @@
     ]);
 })();
 
+/* Remove prefix # url */
 angular.module('knowledgeBattlesApp')
       .config(["$locationProvider", function($locationProvider) {
       $locationProvider.html5Mode({
@@ -22,6 +23,7 @@ angular.module('knowledgeBattlesApp')
       });
 }]);
 
+/* Initializes localStorage */
 angular.module('knowledgeBattlesApp')
       .run(function($window, $rootScope) {
           if($window.localStorage.getItem('Users') === null)
