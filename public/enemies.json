@@ -1,101 +1,101 @@
 [
     {
-        "operation":"sum",
+        "operation":"+",
         "numberOne": 5,
         "numberTwo": 8
     },
     {
-        "operation":"subtraction",
+        "operation":"-",
         "numberOne": 40,
         "numberTwo": 9
     },
     {
-        "operation":"sum",
+        "operation":"+",
         "numberOne": 11,
         "numberTwo": 525
     },
     {
-        "operation":"multiplication",
+        "operation":"*",
         "numberOne": 15,
         "numberTwo": 225
     },
         {
-        "operation":"division",
+        "operation":"/",
         "numberOne": 500,
         "numberTwo": 50
     },
         {
-        "operation":"sum",
+        "operation":"+",
         "numberOne": 20,
         "numberTwo": 80
     },
     {
-        "operation":"subtraction",
+        "operation":"-",
         "numberOne": 40,
         "numberTwo": 9
     },
     {
-        "operation":"sum",
+        "operation":"+",
         "numberOne": 1225,
         "numberTwo": 555
     },
     {
-        "operation":"multiplication",
+        "operation":"*",
         "numberOne": 15,
         "numberTwo": 14
     },
         {
-        "operation":"division",
+        "operation":"/",
         "numberOne": 880,
         "numberTwo": 10
     },
         {
-        "operation":"sum",
+        "operation":"+",
         "numberOne": 65,
         "numberTwo": 8
     },
     {
-        "operation":"subtraction",
+        "operation":"-",
         "numberOne": 400,
         "numberTwo": 153
     },
     {
-        "operation":"sum",
+        "operation":"+",
         "numberOne": 544,
         "numberTwo": 10
     },
     {
-        "operation":"multiplication",
+        "operation":"*",
         "numberOne": 5,
         "numberTwo": 8
     },
         {
-        "operation":"division",
+        "operation":"/",
         "numberOne": 10,
         "numberTwo": 1
     },
         {
-        "operation":"sum",
+        "operation":"+",
         "numberOne": 0,
         "numberTwo": 1890
     },
     {
-        "operation":"subtraction",
+        "operation":"-",
         "numberOne": 15,
         "numberTwo": 9
     },
     {
-        "operation":"sum",
+        "operation":"+",
         "numberOne": 2,
         "numberTwo": 52555
     },
     {
-        "operation":"multiplication",
+        "operation":"*",
         "numberOne": 1,
         "numberTwo": 3500
     },
         {
-        "operation":"division",
+        "operation":"/",
         "numberOne": 100,
         "numberTwo": 10
     }
