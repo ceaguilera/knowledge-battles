@@ -3,19 +3,34 @@
         <div class="col-md-offset-1 col-md-8 block-center">
             <h1>Welcome to the Battle of Knowledge game</h1>
             <h2>Choose your character to play</h2>
-            <div class="form-group">
-                <label for="email">Email:</label>
-                <input type="email" class="form-control" id="email">
-            </div>
-            <div class="col-md-2" ng-repeat="character in characters">
-                <img src="{{character.urlImage}}"
-                     ng-class="{'img-select': character.select === true}"
-                     class="img-circle img-hover" 
-                     alt="{{character.name}}"
-                     ng-click="selectCharacter(character.id)">
-                 <h2 ng-class="{'title-select': character.select === true}">{{character.name}}</h2>
-            </div>
-            <a ui-sref="game"><button type="button" class="btn btn-warning">PLAY</button></a>
+            <form name="register" novalidate>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input 
+                        type="email" 
+                        class="form-control" 
+                        name="email"
+                        ng-model="user.email"
+                        placeholder="example@email.com"
+                        required
+                    >
+                    <span ng-show="(register.email.$error.required && register.$submitted) || 
+                    (user.character == null && register.$submitted) ||
+                    (register.email.$error.email && register.$submitted)"
+                    >
+                        Place email or choose character
+                    </span>
+                </div>
+                <div class="col-md-2" ng-repeat="character in characters">
+                    <img src="{{character.urlImage}}"
+                        ng-class="{'img-select': character.select === true}"
+                        class="img-circle img-hover" 
+                        alt="{{character.name}}"
+                        ng-click="selectCharacter(character.id, $index)">
+                    <h2 ng-class="{'title-select': character.select === true}">{{character.name}}</h2>
+                </div>
+                <button type="submit" class="btn btn-warning" ng-click="play()">PLAY</button>
+            </form>
         </div>
     </div>
     <img src="../assets/images/fondo.jpg" alt="" class="img-responsive">
