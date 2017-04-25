@@ -33,7 +33,6 @@ angular.module('knowledgeBattlesApp').
         /* Calculation the enemies for level */
         this.assignEnemies = function (level, grid) {
             let numEnemies = (2 * 20) - (level * 5);
-            //console.log(numEnemies);
             let i = 0;
             while (i < numEnemies) {
                 let posRandomOne = Math.floor(Math.random()*10);

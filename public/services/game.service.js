@@ -1,5 +1,5 @@
 angular.module('knowledgeBattlesApp').
-    factory("gameService", function($rootScope, $http, $uibModal) {
+    factory("gameService", function($rootScope, $http, $uibModal,$window) {
         var open = function (template, Controller) {
             window.onkeydown = null;
             var modalInstance = $uibModal.open({
@@ -15,10 +15,11 @@ angular.module('knowledgeBattlesApp').
     return{
         /*  */
         move : function(direction, grid) {
+            if(!grid[$rootScope.posXAct][$rootScope.posYAct].explored)
+                $rootScope.score = $rootScope.score + 5;
             grid[$rootScope.posXAct][$rootScope.posYAct].explored = true;
             grid[$rootScope.posXAct][$rootScope.posYAct].active = false;
-            //console.log($rootScope.posXAct,$rootScope.posYAct);
-            //console.log( grid[$rootScope.posXAct][$rootScope.posYAct]);
+            
             switch (direction) {
                 case "left":
                     //console.log("entro left");
@@ -57,7 +58,7 @@ angular.module('knowledgeBattlesApp').
         enemyOn : function(grid) {
             //console.log($rootScope.posXAct);
             //console.log($rootScope.posYAct);
-            if(grid[$rootScope.posXAct][$rootScope.posYAct].enemy)
+            if(grid[$rootScope.posXAct][$rootScope.posYAct].enemy && !grid[$rootScope.posXAct][$rootScope.posYAct].explored)
                 open('modalEnemy.html', 'modalEnemy');
         },
         mapCompleted : function (grid) {
@@ -106,6 +107,24 @@ angular.module('knowledgeBattlesApp').
             }
             console.log(solution);
             return solution == response;
+        },
+        saveGame : function (grid) {
+            let users = JSON.parse($window.localStorage.getItem('Users'));
+            const dateUser = new Object();
+            dateUser.grid = grid;
+            dateUser.posXAct = $rootScope.posXAct;
+            dateUser.posYAct = $rootScope.posYAct;
+            dateUser.score = $rootScope.score;
+            dateUser.level = $rootScope.level;
+            dateUser.email = $rootScope.user.email;
+            dateUser.character = $rootScope.user.character
+            angular.forEach(users, function(user, key) {
+                if(user.email === $rootScope.user.email){
+                    angular.copy(dateUser, user);
+                }
+            });
+            $window.localStorage.setItem('Users', JSON.stringify(users));
+            location.href = '/';
         }
         
     }

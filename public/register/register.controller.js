@@ -1,5 +1,5 @@
 angular.module('knowledgeBattlesApp.register')
-.controller('register', function($scope, $rootScope, $state) {
+.controller('register', function($scope, $rootScope, $state, $window) {
     $rootScope.user = {};
     $scope.characters = [
         {
@@ -50,6 +50,9 @@ angular.module('knowledgeBattlesApp.register')
     $scope.play = () => {
         if(!$scope.register.$invalid && $scope.user.character != null){
             console.log("se envia el formulario", $rootScope.user);
+            let users = JSON.parse(window.localStorage.getItem('Users'));
+            users.push($rootScope.user);
+            $window.localStorage.setItem('Users', JSON.stringify(users));
             $state.go("game");
         }else {
             console.log("no envia formilario");
