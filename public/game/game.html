@@ -1,14 +1,16 @@
 <div class="game">
     <div class="container">
         <div class="col-xs-3 info-table">
-            <h1 ng-click="open()">¡Bienvenido a </h1>
-            <h4>Datos</h4>
-            <h4>Correo: ceaf.21@gmail.com</h4>
-            <h4>Personaje: Simon Bolivar</h4>
-            <img src="../assets/images/characters/bolivar.jpg" class="img-circle">
+            <strong><h2>Carabobo Battle</h2></strong>
+            <h4><strong>Player data:</strong></h4>
+            <h4><strong>Email:</strong> {{user.email}}</h4>
+            <h4><strong>Character:</strong> {{user.character.name}}</h4>
+            <img src="{{user.character.urlImage}}" class="img-circle img-character">
+            <h4><strong>Score: 0</strong> </h4>
+            <h4><strong>Level: 0</strong></h4>
+            <button class="btn btn-primary">Save and exit</button>
         </div>
-        <div class="col-xs-9 grid-table">
-            
+        <div class="col-xs-9 grid-table">      
             <div class="row grid">
                 <div class="row" ng-repeat="grid in grids">
                     <div 
@@ -17,7 +19,6 @@
                         ng-class="{'block-active' : grides.active === true, 
                         'block-explored' : grides.explored === true }"
                     >
-
                     </div>
                 </div>
                 

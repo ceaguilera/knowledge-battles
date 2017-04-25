@@ -45,9 +45,21 @@
     .info-table {
         @extend .tablet;
     }
+    .img-character {
+        width: 90% !important;
+    }
     img {
         width: 100%;
         height: 100%;
+    }
+    button {
+        color: #fff !important;
+        font-size: 18px !important;
+        background-color: #574331 !important;
+        border-color: #574331 !important;
+    }
+    h4 {
+        margin-top: 5px;
     }
 }
 .modal-content {

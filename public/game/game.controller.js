@@ -47,14 +47,4 @@ angular.module('knowledgeBattlesApp.game')
                 break;
         }
     }
-
-    $scope.open = function () {
-        var modalInstance = $uibModal.open({
-            animation: true,
-            ariaLabelledBy: 'modal-title',
-            ariaDescribedBy: 'modal-body',
-            templateUrl: 'modalPrueba.html',
-        });
-    }
-
 });

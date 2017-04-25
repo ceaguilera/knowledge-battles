@@ -37,9 +37,18 @@
     .game .grid-table .grid .block-explored {
       background: #af8864 url(../assets/images/Flag.png);
       background-size: 52px 52px; }
+  .game .img-character {
+    width: 90% !important; }
   .game img {
     width: 100%;
     height: 100%; }
+  .game button {
+    color: #fff !important;
+    font-size: 18px !important;
+    background-color: #574331 !important;
+    border-color: #574331 !important; }
+  .game h4 {
+    margin-top: 5px; }
 
 .modal-content {
   background-color: rgba(197, 148, 100, 0.98) !important; }
