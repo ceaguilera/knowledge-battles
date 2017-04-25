@@ -1,4 +1,4 @@
-# The Game Knowledge battles
+#Knowledge battles game
 
 Is a game type role where you choose a character in the history of Latin American Independence to be able to explore maps and win important battles, the first thing you will find is a view where you can decide to start a new game or resume one, after that if you enter as a new user, where you have to put your email and choose between the characters of the story that are:
 
