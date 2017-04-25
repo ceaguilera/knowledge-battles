@@ -1,4 +1,5 @@
 <script type="text/ng-template" id="modalEnemy.html">
+    <!-- Modal attact -->
     <div class="modalEnemy" ng-if="!gameOver && !correctAnswer">
         <div class="modal-header" align="center">
             <h3 class="modal-title" id="modal-title">They attack you</h3>
@@ -13,20 +14,28 @@
             <strong>
                 <h3>{{problem.numberOne}} {{problem.operation}} {{problem.numberTwo}}</h3>
             </strong>
-            <h4>Response:</h4>
-            <input type="text" class="form-control" ng-model="response">
-            <button class="btn btn-primary btnWin" type="button" ng-click="sendAnswer(response)">Send</button>
+            <form name="Win">
+                <h4>Response:</h4>
+                <input type="text" class="form-control" ng-model="response">
+                <button class="btn btn-primary btnWin" type="submit" ng-click="sendAnswer(response)">Send</button>
+            </form>
         </div>
     </div>
+    <!-- End modal attact -->
+
+    <!-- Modal Game Over -->
     <div class="modalEnemy" ng-if="gameOver">
         <div class="modal-body" id="modal-body" aling="center">
         <img src="./assets/images/gameover.gif">
         </div>
         <div class="modal-footer" align="center">
-            <button class="btn btn-primary btnWin" type="button" ng-click="$ctrl.ok()">Reset game</button>
+            <button class="btn btn-primary btnWin" type="button" ng-click="reset()">Reset game</button>
             <button class="btn btn-warning btnWin" type="button" ng-click="backHome()">Back to the game home</button>
         </div>
     </div>
+    <!-- End modal Game Over -->
+    
+    <!-- Modal Correct Answer -->
     <div class="modalEnemy" ng-if="correctAnswer">
         <div class="modal-header" align="center">
             <strong><h2 class="modal-title" id="modal-title">YOU WON THE BATTLE</h2></strong>
@@ -38,4 +47,5 @@
             <h3 class="modal-title" id="modal-title">Keep exploring!!!!</h3>
         </div>
     </div>
+    <!-- End modal Correct Answer -->
 </script>

@@ -1,6 +1,7 @@
 angular.module('knowledgeBattlesApp.register')
 .controller('register', function($scope, $rootScope, $state, $window) {
     $rootScope.user = {};
+    /* Objet for info charactes */
     $scope.characters = [
         {
             id: 1,
@@ -40,6 +41,7 @@ angular.module('knowledgeBattlesApp.register')
         }
     ]
 
+    /* function for seled un character */
     $scope.selectCharacter = (id,pos) => {
         $rootScope.user.character = $scope.characters[pos];
         angular.forEach($scope.characters, function(character, key) {
@@ -47,9 +49,9 @@ angular.module('knowledgeBattlesApp.register')
         })
     }
 
+    /* function for start game */
     $scope.play = () => {
         if(!$scope.register.$invalid && $scope.user.character != null){
-            console.log("se envia el formulario", $rootScope.user);
             let users = JSON.parse(window.localStorage.getItem('Users'));
             users.push($rootScope.user);
             $window.localStorage.setItem('Users', JSON.stringify(users));
@@ -58,5 +60,4 @@ angular.module('knowledgeBattlesApp.register')
             console.log("no envia formilario");
         }
     }
-    console.log($scope.characters);
 });
