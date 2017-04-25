@@ -44,16 +44,36 @@
 .modal-content {
   background-color: rgba(197, 148, 100, 0.98) !important; }
 
-.modalWin .modal-footer {
+.modalWin .modal-footer, .modalEnemy .modal-footer {
   text-align: center; }
-  .modalWin .modal-footer .btnWin {
+  .modalWin .modal-footer .btnWin, .modalEnemy .modal-footer .btnWin {
     color: #fff !important;
     font-size: 18px !important;
     background-color: #574331 !important;
     border-color: #574331 !important; }
 
-.modalWin .modal-header .modal-title {
+.modalWin .modal-header .modal-title, .modalEnemy .modal-header .modal-title {
   margin: 0;
   color: #fff;
   line-height: 1.42857143;
   font-size: 32px; }
+
+.modalEnemy .modal-header .modal-title {
+  font-size: 23px; }
+
+.modalEnemy .modal-body {
+  text-align: center; }
+  .modalEnemy .modal-body img {
+    max-width: 100%;
+    height: 200px; }
+
+.modalEnemy .modal-footer input {
+  display: -webkit-inline-box;
+  width: 32%; }
+
+.modalEnemy .modal-footer h3 {
+  color: #FFF; }
+
+.modalEnemy .modal-footer h4 {
+  color: #FFF;
+  display: inline-block; }
