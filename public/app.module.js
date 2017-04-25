@@ -21,4 +21,13 @@ angular.module('knowledgeBattlesApp')
           requireBase: false
       });
 }]);
-        
+
+angular.module('knowledgeBattlesApp')
+      .run(function($window, $rootScope) {
+          if($window.localStorage.getItem('Users') === null)
+          {
+               let users = new Array();
+               $window.localStorage.setItem('Users', JSON.stringify(users));
+          }
+
+});
