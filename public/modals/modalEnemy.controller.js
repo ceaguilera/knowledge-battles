@@ -18,4 +18,8 @@ angular.module('knowledgeBattlesApp.game')
         }
     }
 
+    $scope.backHome = () => {
+        location.href = '/';
+    }
+
 });
