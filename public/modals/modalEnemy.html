@@ -1,0 +1,41 @@
+<script type="text/ng-template" id="modalEnemy.html">
+    <div class="modalEnemy" ng-if="!gameOver && !correctAnswer">
+        <div class="modal-header" align="center">
+            <h3 class="modal-title" id="modal-title">They attack you</h3>
+            <h3 class="modal-title" id="modal-title">You have to solve this mathematical problem to win</h3>
+            <h3 class="modal-title" id="modal-title">Luck, you have little time</h3>
+        </div>
+        <div class="modal-body" id="modal-body" aling="center">
+        <img src="./assets/images/battles.jpg">
+        </div>
+        <div class="modal-footer" align="center">
+            <h3>Mathematical problem:</h3>
+            <strong>
+                <h3>{{problem.numberOne}} {{problem.operation}} {{problem.numberTwo}}</h3>
+            </strong>
+            <h4>Response:</h4>
+            <input type="text" class="form-control" ng-model="response">
+            <button class="btn btn-primary btnWin" type="button" ng-click="sendAnswer(response)">Send</button>
+        </div>
+    </div>
+    <div class="modalEnemy" ng-if="gameOver">
+        <div class="modal-body" id="modal-body" aling="center">
+        <img src="./assets/images/gameover.gif">
+        </div>
+        <div class="modal-footer" align="center">
+            <button class="btn btn-primary btnWin" type="button" ng-click="$ctrl.ok()">Reset game</button>
+            <button class="btn btn-warning btnWin" type="button" ng-click="$ctrl.cancel()">Back to the game home</button>
+        </div>
+    </div>
+    <div class="modalEnemy" ng-if="correctAnswer">
+        <div class="modal-header" align="center">
+            <strong><h2 class="modal-title" id="modal-title">YOU WON THE BATTLE</h2></strong>
+        <div class="modal-body" id="modal-body" aling="center">
+        <img src="http://blog.chavez.org.ve/wp-content/uploads/2010/06/batalla-de-carabobo1.jpg">
+        </div>
+        <div class="modal-footer" align="center">
+            <h3 class="modal-title" id="modal-title">Congratulations</h3>
+            <h3 class="modal-title" id="modal-title">Keep exploring!!!!</h3>
+        </div>
+    </div>
+</script>
