@@ -11,6 +11,7 @@ angular.module('knowledgeBattlesApp.game')
         if(gameService.solutionProblem(response, $scope.problem)) {
             console.log("correcto");
             $scope.correctAnswer = true;
+            $rootScope.score = $rootScope.score + 15;
             setTimeout($scope.cancel, 1500);
         }else {
             console.log("incorrecto");
