@@ -81,6 +81,8 @@ Finally, raise the server and play!
 $ node server
 ```
 
+http://localhost:8080/
+
 # Demo 
 
 https://boiling-bayou-25703.herokuapp.com/
