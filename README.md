@@ -45,6 +45,7 @@ The main structure of the game is:
 Where in the/public folder are the files corresponding to the performance of the play.
 
 It has the following division by module:
+
   - /home (First sight)
   - /register (view register)
   - /login (view login) * not implemented *
