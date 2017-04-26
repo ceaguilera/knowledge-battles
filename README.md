@@ -8,19 +8,30 @@ Is a game type role where you choose a character in the history of Latin America
   - José Antonio Páez
   - Rafael Urdaneta
   - Santiago Mariño
+
+
+![N|Solid](https://boiling-bayou-25703.herokuapp.com/assets/images/2.png)
  
 Then choose a character started the game, you have a Board of 10 x 10 right and data, photo, score and level of the character that you chose.
+
+![N|Solid](https://boiling-bayou-25703.herokuapp.com/assets/images/3.png)
 
 You can move on the Board to explore with the dates of the keyboard:
 
 
 ![N|Solid](http://4.bp.blogspot.com/_I646rDniKDk/S2fniH8GKTI/AAAAAAAAAYI/8i4urxyv1p0/s320/flechas.gif)
 
+![N|Solid](https://boiling-bayou-25703.herokuapp.com/assets/images/7.png)
+
 Be careful, since if you find a box with an enemy, you attack!
 
 To be able to beat him you have to solve mathematical operations that can be addition, subtraction, multiplication, or division.
 
+![N|Solid](https://boiling-bayou-25703.herokuapp.com/assets/images/5.png)
+
 Once you've explored across the map, and thus defeated all the enemies, you win the battle (for now only there is a map, but in the future they will be more than 5 by conquer).
+
+![N|Solid](https://boiling-bayou-25703.herokuapp.com/assets/images/6.png)
 
 # Game development
 
@@ -40,7 +51,7 @@ The technologies that were used to develop the game were as follows:
 # Code structure
 The main structure of the game is:
 
-![N|Solid](https://lh3.googleusercontent.com/NET9VaZRZqDxVZUzCznCacyesjIq2GmYIUngFG7jVK4aaPSi0MkiEaifzhYiDAP7VGOwvqxSzB2X4Gw=w1366-h651)
+![N|Solid](https://boiling-bayou-25703.herokuapp.com/assets/images/8.png)
 
 Where in the/public folder are the files corresponding to the performance of the play.
 
